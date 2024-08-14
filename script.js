@@ -1,15 +1,17 @@
 
-let btn = document.getElementById('btn');
-let texto = document.getElementById('texto');
+const btn = document.getElementById('btn');
+const texto = document.getElementById('texto');
 
 btn.addEventListener('click', function(){
-    reverseString(texto.value);
+    let textoValue = texto.value;
+    reverseString(textoValue);
 });
 
+/**
+ * Revierte el texto ingresado y lo imprime al revés
+ * @param {string} texto - Texto a revertir
+ */
 function reverseString(texto){
-    let textoRevertido = '';
-    for(let i=texto.length-1;i>=0;i--){
-        textoRevertido += texto[i];
-    }
+    let textoRevertido = texto.split('').reverse().join('');
     console.log(textoRevertido);
 }
