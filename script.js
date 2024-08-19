@@ -1,11 +1,12 @@
+window.onload = ()=> {
+    const btn = document.getElementById('btn');
+    const texto = document.getElementById('texto');
 
-const btn = document.getElementById('btn');
-const texto = document.getElementById('texto');
-
-btn.addEventListener('click', function(){
-    let textoValue = texto.value;
-    reverseString(textoValue);
-});
+    btn.addEventListener('click', function(){
+        let textoValue = texto.value;
+        reverseString(textoValue);
+    });
+}
 
 /**
  * Revierte el texto ingresado y lo imprime al revés
